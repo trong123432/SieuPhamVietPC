@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>order</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+  integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
+  <script src="https://kit.fontawesome.com/6dff643abc.js" crossorigin="anonymous"></script>
+  <script src="../../assets/js/jquery-3.7.1.min.js"></script>
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="../../assets/css/order__reponsive.css" />
+  <link rel="stylesheet" href="../../assets/css/order__main.css" />
+  <link rel="icon" href="../../assets/img/header/logo.png" type="image/x-icon" />
+</head>
+
+<body id="top">
+  <header class=" d-md-flex menu" id="header">
+    <div class="logo">
+        <a href="../../SieuPhamViet.html">
+            <h3 class=" d-lg-block">Siêu Phẩm Việt</h3>
+            <img src="../../assets/img/header/logo.png" alt="logo">
+        </a>
+    </div>
+    <div class="nav">
+        <i class='bx bx-menu icon' style="color: white"></i>
+        <span>Danh Mục</span>
+        <div class="menu-container">
+            <div class="menu-child">
+                <a href="../../danhmucweb/pclapsan/Pcbuilt.html">
+                    <img src="../../assets/img/linkKienPC/pc-do-hoa.png" alt="PC" width="80px">
+                    <h4>PC ráp sẵn</h4>
+                </a>
+            </div>
+            <div class="menu-child">
+                <a href="../../danhmucweb/mainboard/mainboard.html">
+                    <img src="../../assets/img/linkKienPC/mainboard.png" alt="Mainboard" width="80px">
+                    <h4>Mainboard</h4>
+                </a>
+            </div>
+            <div class="menu-child">
+                <a href="../../danhmucweb/tannhiet/tan__nhiet.html">
+                    <a href="../../danhmucweb/vga/Vga.html">
+                        <img src="../../assets/img/linkKienPC/vga.png" alt="VGA" width="80px">
+                        <h4>VGA</h4>
+                    </a>
+            </div>
+            <div class="menu-child">
+                <a href="../../danhmucweb/cpu/cpu.html">
+                    <img src="../../assets/img/linkKienPC/cpu.png" alt="CPU" width="80px">
+                    <h4>CPU</h4>
+                </a>
+            </div>
+            <div class="menu-child">
+                <a href="../../danhmucweb/Ram/Ram.html">
+                    <img src="../../assets/img/linkKienPC/ram.png" alt="RAM" width="80px">
+                    <h4>RAM</h4>
+                </a>
+            </div>
+            <div class="menu-child">
+                <a href="../../danhmucweb/o_cung/o_cung.html">
+                    <img src="../../assets/img/linkKienPC/o_cung.png" alt="Ổ Cứng" width="80px">
+                    <h4>Ổ Cứng</h4>
+                </a>
+            </div>
+            <div class="menu-child">
+                <a href="../../danhmucweb/tannhiet/tan__nhiet.html">
+                    <img src="../../assets/img/linkKienPC/tan_nhiet.png" alt="Tản Nhiệt" width="80px">
+                    <h4>Tản Nhiệt</h4>
+                </a>
+            </div>
+            <div class="menu-child">
+                <a href="../../danhmucweb/vo_case/vo_case.html">
+                    <img src="../../assets/img/linkKienPC/vo_case.png" alt="Vỏ Case" width="80px">
+                    <h4>Vỏ Case</h4>
+                </a>
+            </div>
+            <div class="menu-child">
+                <a href="../../danhmucweb/buildPC/buildPC.html">
+                    <img src="../../assets/img/linkKienPC/LZ8A8126_Final.webp" alt="Vỏ Case" width="80px">
+                    <h4>Tự Build PC</h4>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="menu-search">
+        <input class="menu-input-search" type="text" placeholder="Tìm kiếm sản phầm bạn ưa thích"
+            spellcheck="false">
+        <span onclick="toggleSearchMenu()"> <i class='bx bx-search'></i> </span>
+        <button class="close" type="button" onclick="closeSearchMenu()"><i class='bx bx-x'
+                style="font-size: 40px;"></i></button>
+    </div>
+    <div>
+        <ul class="list-menu">
+            <li><a href="../../danhmucweb/datHang/order__main.html"><i class='bx bx-cart '></i><span>(9)</span></a>
+            </li>
+            <li><a href="../../danhmucweb/listweb/dangnhap.html"><i class='bx bx-user-circle'></i>
+                    <span>Đăng Nhập</span></a>
+            </li>
+        </ul>
+    </div>
+</header>
+
+  <div class="cart__layout">
+    <!--lop tong the-->
+    <div class="cart__wrapper">
+      <!--lop  chua noi dung-->
+      <h1 class="tagh1">GIỎ HÀNG CỦA BẠN</h1>
+      <p>
+        <b style="color: red">
+          Liên hệ nhân viên trước khi chuyển tiền mua hàng.
+          <br />
+          Để đặt hàng
+        </b>
+        , quý khách vui lòng kiểm tra sản phẩm, số lượng, giá, màu sắc và điền
+        các thông tin dưới đây:
+      </p>
+      <hr />
+      <!-- -----------------------------cac san pham----------------------- -->
+      <div class="things">
+        <!-- ------------------san pham 1------------------------- -->
+        <div class="thing__item">
+          <div class="thing__item--img">
+            <img src="../../assets/img/order/item1.jpg" alt="" />
+          </div>
+          <div class="thing__item--content">
+            <a href="#" class="taga">
+              Laptop Lenovo LOQ 15IRX9 83DV00D5VN (Intel Core i7-13650HX |RTX
+              4050 | 16GB | 512GB | 15.6 inch FHD | Win 11 | Xám)
+            </a>
+            <p style="color: red">Mã sản phẩm: NBLN0860</p>
+            <p>Bảo hành: 24 tháng, Bảo Hành Chính Hãng Lenovo</p>
+          </div>
+          <div class="thing__item--price">
+            <span style="color: #999; text-decoration: line-through">32.000.000 ₫</span><br />
+            <span>28.000.000 ₫</span><br />
+            <input type="hidden" value="28000000" id="price-1" />
+            <b style="color: red">Tổng: <span id="payment1"></span></b>
+            <div class="changenumber">
+              <button id="change__decrease-1" class="change__button">
+                <b>-</b>
+              </button>
+              <input type="text" value="1" id="quantity-1" />
+              <button id="change__increase-1" class="change__button">
+                <b>+</b>
+              </button>
+            </div>
+          </div>
+        </div>
+        <!-- --------------------------------------------------------- -->
+        <hr />
+        <!-- -------------------------san pham 2---------------------- -->
+        <div class="thing__item">
+          <div class="thing__item--img">
+            <img src="../../assets/img/order/item2.jpg" alt="" />
+          </div>
+          <div class="thing__item--content">
+            <a href="#" class="taga">
+              VGA Gigabyte RTX 4060 Windforce OC 8GB (N4060WF2OC_8GD)
+            </a>
+            <p style="color: red">Mã sản phẩm: VGGI0317</p>
+            <p>Bảo hành: 36 tháng</p>
+          </div>
+          <div class="thing__item--price">
+            <span style="color: #999; text-decoration: line-through">11.999.000 ₫</span><br />
+            <span>7.999.000 ₫</span><br />
+            <input type="hidden" value="7999000" id="price-2" />
+            <b style="color: red">Tổng: <span id="payment2"></span></b>
+            <div class="changenumber">
+              <button id="change__decrease-2" class="change__button">
+                <b>-</b>
+              </button>
+              <input type="text" value="1" id="quantity-2" />
+              <button id="change__increase-2" class="change__button">
+                <b>+</b>
+              </button>
+            </div>
+          </div>
+        </div>
+        <!-- --------------------------------------------------------- -->
+        <hr />
+        <!-- -------------------------san pham 3---------------------- -->
+        <div class="thing__item">
+          <div class="thing__item--img">
+            <img src="../../assets/img/order/item3.jpg" alt="" />
+          </div>
+          <div class="thing__item--content">
+            <a href="#" class="taga">
+              Màn Hình Gaming UltraWide SAMSUNG Odyssey G5 LC34G55TWWEXXV
+              (34.0 inch - WQHD - 165Hz - VA - 1ms - FreeSync - HDR10 -
+              Curved)
+            </a>
+            <p style="color: red">Mã sản phẩm: NBLN0860</p>
+            <p>Bảo hành: 24 tháng</p>
+          </div>
+          <div class="thing__item--price">
+            <span style="color: #999; text-decoration: line-through">9.999.000 ₫</span><br />
+            <span>7.389.000 ₫</span><br />
+            <input type="hidden" value="7389000" id="price-3" />
+            <b style="color: red">Tổng: <span id="payment3"></span></b>
+            <div class="changenumber">
+              <button id="change__decrease-3" class="change__button">
+                <b>-</b>
+              </button>
+              <input type="text" value="1" id="quantity-3" />
+              <button id="change__increase-3" class="change__button">
+                <b>+</b>
+              </button>
+            </div>
+          </div>
+        </div>
+        <!-- --------------------------------------------------------- -->
+      </div>
+      <!-- ------------------------------------------------------------------------------ -->
+      <hr />
+      <!-- --------------------------------------thanh toan------------------------------------ -->
+      <div class="total">
+        <div class="total__voucher">
+          <p style="font-weight: bolder; color: red">Mã giảm giá</p>
+          <input id="voucher__code" type="text" placeholder="vd: thaytrungdeptrai123" value="" />
+          <button id="voucher__action"><b>Áp dụng</b></button>
+        </div>
+        <div class="total__price">
+          <span>Phí vận chuyển: 0 ₫</span><br />
+          <span>Phí dịch vụ: 0 ₫</span><br />
+          <b style="color: red">Tổng cộng: <span id="totalPrice"></span></b>
+          <p>Giảm giá: <span id="voucher__discount"></span></p>
+          <b style="color: red">Thanh toán: <span id="totalPayment"></span></b>
+        </div>
+      </div>
+      <!-- ------------------------------------------------------------------------------------- -->
+      <hr />
+      <div class="payments">
+        <button id="btn__left" class="btn btn-primary button__left">
+          <b>Đặt hàng</b>
+        </button>
+        <button id="btn__right" class="btn btn-warning button__right">
+          <b>Mua trả góp</b>
+        </button>
+      </div>
+    </div>
+
+    <div class="cart__wrapper">
+      <h1 class="tagh1">ĐẶT HÀNG</h1>
+      <h2 class="tagh2">1. Thông tin khách hàng</h2>
+      <div class="form-check form-check-inline">
+        <input type="radio" class="form-check-input" name="gender" id="gender__male" />
+        <label for="gender__male" class="form-check-label">Anh</label>
+      </div>
+      <div class="form-check form-check-inline">
+        <input type="radio" class="form-check-input" name="gender" id="gender__female" />
+        <label for="gender__female" class="form-check-label">Chị</label>
+      </div>
+      <div class="form-group">
+        <input type="text" class="form__item form-control" placeholder="Họ và tên" id="full--name" />
+        <input type="mail" class="form__item form-control" placeholder="Email" id="email" />
+        <input type="phone" class="form__item form-control" placeholder="Số điện thoại" id="phone" />
+        <select class="form__item form-select" name="city" id="city">
+          <option value="0">--Chọn Tỉnh/TP--</option>
+          <option value="1">TP. Hồ Chí Minh</option>
+          <option value="2">TP. Hà Nội</option>
+          <option value="3">TP. Đà Nẵng</option>
+        </select>
+        <input type="text" class="form__item form-control" placeholder="Địa chỉ" id="address" />
+        <input type="text" class="form__item form-control" placeholder="Ghi chú" />
+      </div>
+      <h2 class="tagh2">2. Hình thức thanh toán</h2>
+      <div class="form-check">
+        <input type="radio" class="form-check-input" name="payment__methods" id="payment__method1" />
+        <label for="payment__method1">COD</label>
+      </div>
+      <div class="form-check">
+        <input type="radio" class="form-check-input" name="payment__methods" id="payment__method2" />
+        <label for="payment__method2">Chuyển khoản</label>
+      </div>
+      <h2 class="tagh2">3. Hình thức vận chuyển</h2>
+      <div class="form-check">
+        <input type="radio" class="form-check-input" name="trans__methods" id="trans__method1" />
+        <label for="trans__method1">Giao hàng tiết kiệm</label>
+      </div>
+      <div class="form-check">
+        <input type="radio" class="form-check-input" name="trans__methods" id="trans__method2" />
+        <label for="trans__method2">Giao hàng nhanh</label>
+      </div>
+      <div class="form-check">
+        <input type="radio" class="form-check-input" name="trans__methods" id="trans__method3" />
+        <label for="trans__method3">Giao hàng hỏa tốc</label>
+      </div>
+      <div class="butsubmit">
+        <button id="btn__pay" class="btn btn-primary button__submit">
+          GỬI ĐƠN HÀNG
+        </button>
+      </div>
+    </div>
+  </div>
+  <div id="footer-1">
+    <p>MỜI BẠN NHẬP EMAIL ĐỂ NHẬN KHUYẾN MÃI</p>
+    <div class="footer__voucher">
+      <input class="form-check-input" type="email" placeholder="Nhập email vào" />
+      <button class="btn btn-warning">NHẬN MÃ</button>
+    </div>
+  </div>
+  <div id="scrollToTop">
+    <a id="btnbg" href="#top"> <i class='bx bxs-arrow-to-top'></i> </a>
+    <a type="submit" formaction="#" href="#top"> <i class='bx bxs-arrow-to-top'></i> </a>
+  </div>
+
+  <footer id="footer">
+    <div class="footer-container">
+      <div class="footer-contact">
+        <button type="button" class="btn btn-primary focus:outline-none border-0" data-bs-toggle="collapse"
+          data-bs-target="#contact-collapse">
+          Tổng đài hỗ trợ <i class='bx bxs-chevron-down'></i>
+        </button>
+        <div id="contact-collapse" class="collapse">
+          <p>Gọi Mua Hàng: <a href="#">1800.2097</a> </p>
+          <p>Khiếu nại: <a href="#">1800.1062</a></p>
+          <p>Bảo hành: <a href="#">1900 232 464</a></p>
+        </div>
+
+        <h4>Phương thức thanh toán.</h4>
+        <div class="footer-img">
+          <a href="https://zalopay.vn/"><img src="../../assets/img/footer/zalopay-logo.webp" alt="zalopay"></a>
+          <a href="https://www.momo.vn/"><img src="../../assets/img/footer/momo_1.webp" alt="MOMO"></a>
+          <a href="https://www.visa.com.vn/en_VN"><img
+              src="../../assets/img/footer/d4bbea4570b93bfd5fc652ca82a262a8.png" alt="visa"></a>
+          <a href="https://onepay.vn/invoice/login.op"><img src="../../assets/img/footer/onepay-logo.webp"
+              alt="onePay"></a>
+          <a href="https://vnpay.vn/"><img src="../../assets/img/footer/vnpay-logo.webp" alt="VNpay"></a>
+          <a href="https://www.apple.com/vn/apple-pay/"><img src="../../assets/img/footer/apple-pay-og.webp"
+              alt="applepay"></a>
+        </div>
+      </div>
+
+      <div class="footer-text">
+        <button type="button" class="btn btn-primary" data-bs-toggle="collapse" data-bs-target="#text-collapse">
+          Thông tin và chính sách <i class='bx bxs-chevron-down'></i>
+        </button>
+        <div id="text-collapse" class="collapse">
+          <p>Mua hàng và thanh toán Online</p>
+          <p>Mua hàng trả góp Online</p>
+          <p>Mua hàng trả góp bằng thẻ tín dụng</p>
+          <p>Giao hàng & Thanh toán</p>
+          <p>Tin tức khuyến mại</p>
+          <p>Tra thông tin bảo hành</p>
+          <p>Tra cứu hoá đơn điện tử</p>
+          <p>Thông tin hoá đơn mua hàng</p>
+          <p>Trung tâm bảo hành chính hãng</p>
+        </div>
+      </div>
+
+      <div class="footer-different">
+        <button type="button" class="btn btn-primary" data-bs-toggle="collapse" data-bs-target="#different-collapse">
+          Dịch vụ và thông tin khác <i class='bx bxs-chevron-down'></i>
+        </button>
+        <div id="different-collapse" class="collapse">
+          <p>Khách hàng doanh nghiệp (B2B)</p>
+          <p>Ưu đãi thanh toán</p>
+          <p>Quy chế hoạt động</p>
+          <p>Chính sách bảo mật thông tin cá nhân</p>
+          <p>Chính sách Bảo hành</p>
+          <p>Liên hệ hợp tác kinh doanh</p>
+          <p>Tuyển dụng</p>
+          <p>Dịch vụ bảo hành mở rộng</p>
+        </div>
+      </div>
+
+      <div class="footer-social">
+        <h4>Kết nối với siêu phẩm việt.</h4>
+        <div class="footer-icon">
+          <a href="https://www.facebook.com/"><i class="bx bxl-facebook-circle"></i></a>
+          <a href="https://www.tiktok.com/fr/"><i class="bx bxl-tiktok"></i></a>
+          <a href="https://www.linkedin.com/"><i class="bx bxl-linkedin"></i></a>
+          <a href="https://www.instagram.com/"><i class="bx bxl-instagram"></i></a>
+          <a
+            href="https://accounts.google.com/v3/signin/identifier?continue=https%3A%2F%2Fadmin.google.com%2Fhcmute.edu.vn%2FDashboard&service=CPanel&hl=vi&ddm=1&flowName=GlifWebSignIn&flowEntry=AccountChooser"><i
+              class="bx bxl-gmail"></i></a>
+          <a
+            href="https://www.messenger.com/login.php?next=https%3A%2F%2Fwww.messenger.com%2Ft%2F8714169748610710%3Flocale%3Dvi_VN"><i
+              class="bx bxl-messenger"></i></a>
+        </div>
+        <br>
+        <h4>Chứng nhận.</h4>
+        <div class="footer-img">
+          <a href="#"><img src="../../assets/img/footer/dmca_icon_8fc6622bd5.svg" alt=""></a>
+          <a href="#"><img src="../../assets/img/footer/san_pham_dich_vu_hang_dau_viet_nam_icon_282a9ba4f7.svg"
+              alt=""></a>
+          <a href="#"><img src="../../assets/img/footer/thuong_hieu_manh_2013_icon_b56f772475.svg" alt=""></a>
+          <a href="#"><img src="../../assets/img/footer/noi_khong_voi_hang_gia_icon_e16037d9cb.svg" alt=""></a>
+          <a href="#"><img src="../../assets/img/footer/da_thong_bao_bo_cong_thuong_icon_64785fb3f7.svg" alt=""></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="footer-text">
+        <h5>Chính sách bảo mật</h5>
+        <h5>Chính sách vận chuyển</h5>
+        <h5>Quy chế hoạt động</h5>
+        <h5>Chính sách trả hàng và hoàn tiền</h5>
+      </div>
+      <div>
+        <p>© 2024. Công ty Cổ Phần Bán Lẻ Kỹ Thuật Số Siêu Phẩm Việt. GPDKKD: 0303217354 do sở KH & ĐT TP.HCM
+          cấp ngày
+          15/12/2024. GPMXH:
+          238/GP-BTTTT do Bộ Thông Tin và Truyền Thông cấp ngày 15/12/2024.</p>
+        Địa chỉ: 280, An Dương Vương, P. 4, Q. 5, Tp. Hồ Chí Minh.
+        <p>Địa chỉ liên hệ và gửi chứng từ: 280, An Dương Vương, P. 4, Q. 5, Tp. Hồ Chí Minh.</p>
+        <p> Email:
+          cskh@sieuphamviet.com. Email: hotrotmdt@sieuphamviet.com.</p> Chịu trách nhiệm nội dung: Dương
+        Trung Nguyên, Nguyễn Phạm Phú An, Nguyễn Văn Tuấn, Trần Nguyễn Xuân Sơn, Nguyễn Đức Trọng.
+        <a href="#" style="text-decoration: none;">Xem chính sách sử dụng</a>
+      </div>
+    </div>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+  crossorigin="anonymous"></script>
+  <script src="../../assets/js/order__number.js"></script>
+  <script src="../../assets/js/order__price.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="../../assets/css/trangadmin.css">
+    <link rel="stylesheet" href="../../assets/css/bootstrap.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+    <script src="../../assets/js/adminmain.js"></script>
+    <link rel="icon" href="../../assets/img/header/logo.png" type="image/x-icon">
+</head>
+<body>
+    <div class="navbar1">
+        <div class="navbar-p1">
+            <div class="anhemlogo">
+                <a href="#" onclick="showmenu()"><i class='bx bx-menu'></i></a>
+                <a href="../../SieuPhamViet.html"><img src="../../assets/img/logo.png" class="navbarimg"></a>
+            </div>
+            <div class="menu-search-cha">
+                <div class="menu-search">
+                    <input class="menu-input-search" type="text" placeholder="Search..." spellcheck="false">
+                    <span onclick=""><i class='bx bx-search'></i></span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="allbox">
+        <div class="menu" id="sidebar">
+            <ul>
+                <li><a href="#"><i class='bx bxs-chat'><span class="mattieu" style="margin-left: 20px;"> Phản Hồi</span></i></a></li>
+                <li ><a href="#"><i class='bx bxs-analyse'><span class="mattieu" style="margin-left: 20px;"> Dữ Liệu</span></i></a></li>
+                <li ><a href="#"><i class='bx bx-user' ><span class="mattieu" style="margin-left: 20px;"> Admin</span></i></a></li>
+                <li ><a href="#"><i class='bx bxs-cog' ><span class="mattieu" style="margin-left: 20px;"> Cài Đặt</span></i></a></li>
+                <li class="logout"><a href="../../danhmucweb/listweb/dangnhap.html" ><i class='bx bxs-log-out' ><span class="mattieu" style="margin-left: 20px;"> Log Out</span></i></a></li>
+            </ul>
+        </div>
+        
+        <div class="danhsach" id="danhsachadmin">
+                <div class="taskbar"  style=" background: white; color: black;">
+                    <h4>Danh Sách Admin</h4>
+                </div>
+                    <div class="danhsachadmin">
+                        <div class="adminso1">
+                            <div>
+                                <img src="../../assets/img/avataradmin.png" style="border-radius: 100%; width: 70px;">
+                            </div>
+                            <div class="admintext">
+                            <span>Trung Nguyên</span>
+                            <br>
+                            <span>Status : </span><span> Online</span><span style="color: #3FB352;"> ●</span>
+                            </div>
+                        </div>
+                        <div class="adminso1">
+                            <div>
+                                <img src="../../assets/img/avataradmin.png" style="border-radius: 100%; width: 70px;">
+                            </div>
+                            <div class="admintext">
+                            <span>Văn Tuấn</span>
+                            <br>
+                            <span>Status : </span><span> Offline</span><span style="color: #CDCDCD;"> ●</span>
+                            </div>
+                        </div>
+                        <div class="adminso1">
+                            <div>
+                                <img src="../../assets/img/avataradmin.png" style="border-radius: 100%; width: 70px;">
+                            </div>
+                            <div class="admintext"> 
+                            <span>Đức Trọng</span>
+                            <br>
+                            <span>Status : </span><span> Online</span><span style="color: #3FB352;"> ●</span>
+                            </div>
+                        </div>
+                        <div class="adminso1">
+                            <div>
+                                <img src="../../assets/img/avataradmin.png" style="border-radius: 100%; width: 70px;">
+                            </div>
+                            <div class="admintext">
+                            <span>Xuân Sơn</span>
+                            <br>
+                            <span>Status : </span><span> Offline</span><span style="color:#CDCDCD;"> ●</span>
+                            </div>
+                        </div>
+                        <div class="adminso1">
+                            <div>
+                                <img src="../../assets/img/avataradmin.png" style="border-radius: 100%; width: 70px;">
+                            </div>
+                            <div class="admintext">
+                            <span>An Maximus</span>
+                            <br>
+                            <span>Status : </span><span> Offline</span><span style="color:#CDCDCD;"> ●</span>
+                            </div>
+                        </div>
+                    </div>
+            <div class="miniheader">
+                <div class="taskbar" style=" background:white; color: black;">
+                    <h4>Dữ Liệu</h4>
+                </div>
+                <div class="Chart" style="padding-top: 20px;" >
+                    <canvas id="myChart" style="width:100%;max-width:600px;background-color: white;"></canvas>
+                    <script>
+                    const xValues = ["Tháng 8", "Tháng 9", "Tháng 10", "Tháng 11", "Tháng 12"];
+                    const yValues = [17, 39, 44, 45, 55];
+                    const barColors = "#347AB8";  
+                    
+                    new Chart("myChart", {
+                      type: "bar",
+                      data: {
+                        labels: xValues,
+                        datasets: [{
+                          backgroundColor: barColors,
+                          data: yValues,
+                        }]
+                      },
+                      options: {
+                        legend: { display: false },
+                        title: {
+                          display: true,
+                          text: "Doanh Thu 5 tháng gần nhất",
+                          fontColor: "black",
+                        },
+                        scales: {
+                          xAxes: [{
+                            ticks: {
+                              autoSkip: false
+                            },
+                            barThickness: 40,
+                            categoryPercentage: 0.5,
+                            barPercentage: 0.8
+                          }],
+                          yAxes: [{
+                            ticks: {
+                              beginAtZero: true
+                            }
+                          }]
+                        }
+                      }
+                    });
+                    </script>
+                </div>
+    
+            </div>
+            <div class="dulieu">
+                <div class="data1">
+                    <div class="luotmua">
+                        <i class='bx bx-calendar-check' style="font-size: 30%; color: #1673CF;"></i>
+                    </div>
+                    <div class="boxtext">
+                        <div><p style="font-weight: bolder; margin-bottom: 0% ;">1,074</p></div>
+                        <div><p style="font-size: 14px;">Lượt Mua</p></div>
+                    </div>
+                </div>
+    
+                <div class="data1">
+                    <div class="truycap">
+                        <i class='bx bx-show-alt' style="font-size: 30%; color: #F2C054; "></i>
+                    </div>
+                    <div class="boxtext">
+                        <div><p style="font-weight: bolder; margin-bottom: 0% ;">10,202</p></div>
+                        <div><p style="font-size: 14px;">Lượt Truy Cập</p></div>
+                    </div>
+                </div>
+                <div class="data1">
+                    <div class="timkiem">
+                        <i class='bx bx-line-chart' style="font-size: 30%; color: #AC413D;"></i>
+                    </div>
+                    <div class="boxtext">
+                        <div><p style="font-weight: bolder; margin-bottom: 0% ;">8,606</p></div>
+                        <div><p style="font-size: 14px;">Lượt Tìm Kiếm</p></div>
+                    </div>
+                </div>
+                <div class="data1">
+                    <div class="doanhthu">
+                        <i class='bx bx-dollar' style="font-size: 30%; color:#5C9B70;"></i>
+                    </div>
+                    <div class="boxtext">
+                        <div><p style="font-weight: bolder; margin-bottom: 0% ;">$57,211</p></div>
+                        <div><p style="font-size: 14px;">Thu Nhập</p></div>
+                    </div>
+                </div>
+        </div>
+    
+        <div class="donhang">
+            <div class="minibar">
+                <i class='bx bx-receipt' style="color:white;" id="minibar">Đơn Hàng Gần Đây</i>
+            </div>
+            <div class="cacdonhang">
+                <table class="table table-hover">
+                    <tr style="font-size: 10px;">
+                        <th>Tài Khoản</th>
+                        <th>Ngày Mua Hàng</th>
+                        <th>Tình Trạng</th>
+                    </tr>
+                    <tr>
+                        <td><i class='bx bxs-user-circle'></i>Vythichpc</td>
+                        <td>23/12/2024</td>
+                        <td><p class="success"> Hoàn Tẩt</p></td>
+                    </tr>
+                    <tr>
+                        <td><i class='bx bxs-user-circle'></i>ElonRush</td>
+                        <td>22/12/2024</td>
+                        <td > <p class="chothanhtoan">Hoãn</p></td>
+                    </tr>
+                    <tr>
+                        <td><i class='bx bxs-user-circle'></i>DaiHaoMa</td>
+                        <td>22/12/2024</td>
+                        <td> <p class="thatbai">Bị Hủy</p></td>
+                    </tr>
+                    <tr>
+                        <td><i class='bx bxs-user-circle'></i>Nguyên</td>
+                        <td>21/12/2024</td>
+                        <td ><p class="thatbai">Bị Hủy</p></td>
+                    </tr>
+                    <tr>
+                        <td><i class='bx bxs-user-circle'></i>Trọng</td>
+                        <td>21/12/2024</td>
+                        <td><p class="success">Hoàn Tất</p></td>
+                    </tr>
+                    <tr>
+                        <td><i class='bx bxs-user-circle'></i>Tuấn</td>
+                        <td>22/12/2024</td>
+                        <td><p class="success">Hoàn Tất</p></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+
+        </div>
+    </div>
+    </div>
+    <script>
+        var flag;
+        let menu =  document.getElementById('sidebar');
+        let chieudai = menu.offsetWidth;
+        let element = document.querySelector('.allbox');
+        let chieudai1 = document.querySelector('.menu ul');
+        let chieudai2 = document.querySelectorAll('.menu li');
+        let matluon = document.querySelectorAll('.mattieu');
+        console.log(chieudai);
+        if(chieudai > 132){
+            flag = true;
+        }
+        else if(chieudai < 41){
+            flag = 3;
+        }
+        else if(chieudai >41 && chieudai < 47){
+            flag = 4;
+        }
+        else{
+            flag = false;
+        }
+        console.log(flag);
+        function showmenu(){
+            if(flag == true){
+                element.style.gridTemplateColumns = "50px auto";
+                chieudai1.style.width = "50px"; 
+                matluon.forEach(function(item) {
+                    item.style.opacity = 0;
+                });
+                chieudai2.forEach(function(item1) {
+                    item1.style.height = "60px";
+                });
+                flag = false;
+            }
+            else if(flag == false){
+                element.style.gridTemplateColumns = "260px auto";
+                chieudai1.style.width = "260px"; 
+                matluon.forEach(function(item) {
+                    item.style.opacity = 1;
+                });
+                chieudai2.forEach(function(item1) {
+                    item1.style.height = "auto";
+                    item1.style.paddingLeft = "10px";
+                });
+                flag = true;
+            }
+            else if(flag == 3){
+                element.style.gridTemplateColumns = "100% 0";
+                chieudai1.style.width = "100%"; 
+                matluon.forEach(function(item) {
+                    item.style.opacity = 1;
+                });
+                chieudai2.forEach(function(item1) {
+                    item1.style.height = "auto";
+                    item1.style.paddingLeft = "10px";
+                });
+                flag = 2;
+            }
+            else if(flag == 2){
+                element.style.gridTemplateColumns = "40px auto";
+                chieudai1.style.width = "40px"; 
+                matluon.forEach(function(item) {
+                    item.style.opacity = 0;
+                });
+                chieudai2.forEach(function(item1) {
+                    item1.style.height = "50px";
+                });
+                flag = 3;
+            }
+            else if(flag == 4){
+                element.style.gridTemplateColumns = "150px 0";
+                chieudai1.style.width = "150px"; 
+                matluon.forEach(function(item) {
+                    item.style.opacity = 1;
+                });
+                chieudai2.forEach(function(item1) {
+                    item1.style.height = "auto";
+                    item1.style.paddingLeft = "10px";
+                });
+                flag = 5;
+            }
+            else if(flag == 5){
+                element.style.gridTemplateColumns = "46px auto";
+                chieudai1.style.width = "46px"; 
+                matluon.forEach(function(item) {
+                    item.style.opacity = 0;
+                });
+                chieudai2.forEach(function(item1) {
+                    item1.style.height = "50px";
+                });
+                flag = 4;
+            }
+        }
+    </script>
+</body>
+</html>

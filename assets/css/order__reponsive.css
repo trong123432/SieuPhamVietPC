@@ -1,0 +1,102 @@
+@media (max-width: 480px){
+    .cart__wrapper{
+        max-width: 100vw;
+        width: 100%;
+        margin: 0;
+        height: auto;
+    }
+    .tagh1{
+        font-weight: 700;
+        font-size: 20px;
+    }
+    
+    .tagh2{
+        font-weight: 400;
+        font-size: 15px;
+    }
+
+    .thing__item--content > a{
+        font-size: 15px;
+    }
+
+    p{
+        font-size: 10px;
+    }
+
+    b, span{
+        font-size: 10px;
+        /* background: blue; */
+    }
+
+    .thing__item{
+        grid-template-columns: 2fr 8fr;
+    }
+
+    .thing__item--price{
+        grid-column-start: 1;
+        grid-column-end: 3;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        text-align: left;
+    }
+
+    .changenumber{
+        /* background: red; */
+        margin: 0;
+        position: relative;
+        top: 50%;
+        transform: translateY(-150%);
+    }
+
+    /* ----------------------------------------------- */
+
+    .form-check-input{
+        font-size: 10px;
+    }
+
+    .total{
+        display: inline;
+    }
+
+    .total__voucher{
+        width: 100em;
+    }
+
+    .total__voucher input{
+        width: 200px;
+        height: 30px;
+        font-size: 10px;
+    }
+    #voucher__code{
+        width: 130px;
+        margin-left: -10px;
+    }   
+
+    .total__voucher button{
+        width: 70px;
+        height: 30px;
+    }
+
+    #btn__pay {
+        width: 150px;
+    }
+
+    /* -------------------------------------------------- */
+
+    .button__submit{
+        width: 250px;
+    }
+
+    #footer-1{
+        padding-bottom: 25px;
+    }
+    .box__prod{
+        max-width: 90%;
+    }
+    .prod{
+        width: 100%;
+    }
+    .prod .prod__img img{
+        width: 100%;
+    }
+}

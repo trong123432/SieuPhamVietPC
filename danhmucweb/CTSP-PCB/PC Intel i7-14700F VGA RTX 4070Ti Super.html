@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chi Tiết Sản Phẩm</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    <link rel="stylesheet" href="../../assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../assets/css/boxicons.min.css">
+    <link rel="stylesheet" href="../../assets/plugin/font-awesome/all.css">
+    <link rel="stylesheet" href="../../assets/css/catagory.css">
+    <link rel="stylesheet" href="../../assets/css/layout.css">
+    <link rel="stylesheet" href="../../assets/css/1.css">
+    <link rel="icon" href="../../assets/img/header/logo.png" type="image/x-icon">
+</head>
+<style>
+    .detail_img {
+        width: 600px;
+        margin-right: 15px;
+        aspect-ratio: auto;
+    }
+
+    .detail_img img {
+        aspect-ratio: 4/3;
+        background-size: cover;
+    }
+
+    .detail_nd {
+        width: fit-content;
+        min-width: 350px;
+    }
+
+    .detail_nd h3 {
+        font-size: 28px;
+    }
+
+    .code_sp,
+    .detail_ndct {
+        padding: 10px 10px;
+        color: #000000;
+    }
+
+    .detail_ndct {
+        padding-top: 35px;
+        padding-bottom: 50px;
+    }
+
+    .detail_soLuong input {
+        padding: 5px 10px;
+        width: 60px;
+        box-sizing: border-box;
+        border: 1px solid gray;
+        margin-bottom: 10px;
+        border-radius: 15px;
+    }
+
+    .add_cart {
+        background-color: #029900;
+        color: white;
+    }
+
+    .buy_now {
+        background-color: #e60f1e;
+        color: white;
+    }
+
+    .info_sanPham {
+        margin-top: 25px;
+        margin-bottom: 15px;
+        border-bottom: 1px solid rgb(21, 158, 192);
+        padding: 10px 0px;
+    }
+
+    .info_sanPham p {
+        padding: 10px 20px;
+        display: inline;
+        color: white;
+        background-color: rgb(61, 61, 61);
+    }
+</style>
+
+<body id="top">
+    <header class=" d-md-flex menu" id="header">
+        <div class="logo">
+            <a href="../../SieuPhamViet.html">
+                <h3 class=" d-lg-block">Siêu Phẩm Việt</h3>
+                <img src="../../assets/img/header/logo.png" alt="logo">
+            </a>
+        </div>
+        <div class="nav">
+            <i class='bx bx-menu icon' style="color: white"></i>
+            <span>Danh Mục</span>
+            <div class="menu-container">
+                <div class="menu-child">
+                    <a href="../../danhmucweb/pclapsan/Pcbuilt.html">
+                        <img src="../../assets/img/linkKienPC/pc-do-hoa.png" alt="PC" width="80px">
+                        <h4>PC ráp sẵn</h4>
+                    </a>
+                </div>
+                <div class="menu-child">
+                    <a href="../../danhmucweb/mainboard/mainboard.html">
+                        <img src="../../assets/img/linkKienPC/mainboard.png" alt="Mainboard" width="80px">
+                        <h4>Mainboard</h4>
+                    </a>
+                </div>
+                <div class="menu-child">
+                    <a href="../../danhmucweb/tannhiet/tan__nhiet.html">
+                        <a href="../../danhmucweb/vga/Vga.html">
+                            <img src="../../assets/img/linkKienPC/vga.png" alt="VGA" width="80px">
+                            <h4>VGA</h4>
+                        </a>
+                </div>
+                <div class="menu-child">
+                    <a href="../../danhmucweb/cpu/cpu.html">
+                        <img src="../../assets/img/linkKienPC/cpu.png" alt="CPU" width="80px">
+                        <h4>CPU</h4>
+                    </a>
+                </div>
+                <div class="menu-child">
+                    <a href="../../danhmucweb/Ram/Ram.html">
+                        <img src="../../assets/img/linkKienPC/ram.png" alt="RAM" width="80px">
+                        <h4>RAM</h4>
+                    </a>
+                </div>
+                <div class="menu-child">
+                    <a href="../../danhmucweb/o_cung/o_cung.html">
+                        <img src="../../assets/img/linkKienPC/o_cung.png" alt="Ổ Cứng" width="80px">
+                        <h4>Ổ Cứng</h4>
+                    </a>
+                </div>
+                <div class="menu-child">
+                    <a href="../../danhmucweb/tannhiet/tan__nhiet.html">
+                        <img src="../../assets/img/linkKienPC/tan_nhiet.png" alt="Tản Nhiệt" width="80px">
+                        <h4>Tản Nhiệt</h4>
+                    </a>
+                </div>
+                <div class="menu-child">
+                    <a href="../../danhmucweb/vo_case/vo_case.html">
+                        <img src="../../assets/img/linkKienPC/vo_case.png" alt="Vỏ Case" width="80px">
+                        <h4>Vỏ Case</h4>
+                    </a>
+                </div>
+                <div class="menu-child">
+                    <a href="../../danhmucweb/buildPC/buildPC.html">
+                        <img src="../../assets/img/linkKienPC/LZ8A8126_Final.webp" alt="Vỏ Case" width="80px">
+                        <h4>Tự Build PC</h4>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="menu-search">
+            <input class="menu-input-search" type="text" placeholder="Tìm kiếm sản phầm bạn ưa thích"
+                spellcheck="false">
+            <span onclick="toggleSearchMenu()"> <i class='bx bx-search'></i> </span>
+            <button class="close" type="button" onclick="closeSearchMenu()"><i class='bx bx-x'
+                    style="font-size: 40px;"></i></button>
+        </div>
+        <div>
+            <ul class="list-menu">
+                <li><a href="../../danhmucweb/datHang/order__main.html"><i class='bx bx-cart '></i><span>(9)</span></a>
+                </li>
+                <li><a href="../../danhmucweb/listweb/dangnhap.html"><i class='bx bx-user-circle'></i>
+                        <span>Đăng Nhập</span></a>
+                </li>
+            </ul>
+        </div>
+    </header>
+    <section class="danh_muc mg_top">
+        <div class="container">
+            <ul>
+                <li><a href="../../SieuPhamViet.html"><ion-icon name="home-outline" role="img" class="md hydrated"></a>
+                </li>
+                <li><a href="../../SieuPhamViet.html"> Trang Chủ</a></li>
+                <li><a href="">></a></li>
+                <li><a href="PC Intel i7-14700F VGA RTX 4070Ti Super.html"> Chi Tiết Sản Phẩm</a></li>
+            </ul>
+        </div>
+    </section>
+    <div class="container main">
+        <article>
+            <!-- làm thông tin giỏ hàng -->
+            <section class="detail_sp">
+                <div class="detail_img">
+                    <div style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff"
+                        class="swiper mySwiper2">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <img src="../../assets/img/sanpham/pcbuilt.1.png" alt="">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="../../assets/img/sanpham/pcb1.1.png" alt="">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="../../assets/img/sanpham/pcb1.2.png" alt="">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="../../assets/img/sanpham/pcb1.3.png" alt="">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="../../assets/img/sanpham/pcb1.4.png" alt="">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="../../assets/img/sanpham/pcb1.5.png" alt="">
+                            </div>
+                        </div>
+                        <div class="swiper-button-next"></div>
+                        <div class="swiper-button-prev"></div>
+                    </div>
+                    <br>
+                    <div thumbsSlider="" class="swiper mySwiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <img src="../../assets/img/sanpham/pcbuilt.1.png" alt="">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="../../assets/img/sanpham/pcb1.1.png" alt="">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="../../assets/img/sanpham/pcb1.2.png" alt="">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="../../assets/img/sanpham/pcb1.3.png" alt="">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="../../assets/img/sanpham/pcb1.4.png" alt="">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="../../assets/img/sanpham/pcb1.5.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <br>
+            <br>
+            <!--thông tin sản phẩm, chi tiết về sản phẩm -->
+            <section class="info_sanPham">
+                <p class="ttsp">Thông tin sản phẩm</p>
+            </section>
+
+
+            <div class="bai_viet">
+                <h2>Đánh giá chi tiết cấu hình PC</h2>
+
+                <h3>Bo mạch chủ ASUS ROG Strix Z790-A GAMING WIFI II DDR5</h3>
+                <p>
+                    ASUS ROG Strix Z790-A GAMING WIFI II DDR5 là bo mạch chủ sử dụng chipset Z790 của Intel thuộc phân
+                    khúc cao cấp của ASUS. Trái tim của bộ PC GVN Intel i7-14700F/ VGA RTX 4070Ti Super sử dụng socket
+                    LGA 1700 có thể chạy được CPU Intel Core thế hệ 13, 14 hỗ trợ PCI-E Gen 5.0 mới nhất. </p>
+                <img src="../../assets/img/sanpham/pcb1.6.webp" alt="">
+                <p>Sở hữu thiết kế mạnh mẽ với phần tản nhiệt cho VRM cùng kích thước ATX, đây được xem là một trong
+                    những sự lựa chọn ở phân khúc mainboard cao cấp có gần như đầy đủ mọi tính năng thời thượng nhất
+                    dành cho những bộ PC Gaming có thể cân mọi tựa game ở chế độ chơi cao nhất.</p>
+
+                <h3>CPU - Bộ vi xử lý Intel Core i7 14700F / Turbo up to 5.4GHz / 20 Nhân 28 Luồng / 33MB / LGA 1700
+                </h3>
+                <P> CPU Intel Core i7 14700F là một trong những dòng sản phẩm trong phân khúc Alder Lake-S sở hữu thông
+                    số kỹ thuật vượt trội 20 nhân 28 luồng, xung nhịp đạt mức tối đa là 5.4GHz đáp ứng tốt hầu hết nhu
+                    cầu sử dụng từ nhẹ nhàng đến nâng cao.</P>
+                <img src="../../assets/img/sanpham/pcb1.7.png" alt="">
+                <p>Để mang đến hiệu năng cho bộ máy PC Gaming, dòng chíp xử lý đến từ nhà Intel dễ dàng tương thích với
+                    sản phẩm bo mạch chủ thuộc series Z790, chuẩn RAM DDR5,..Ngoài ra, điểm ấn tượng nhất trên CPU Core
+                    i7-14700F là được trang bị thêm nhân đồ họa Intel UHD Graphics 770 tăng cường khả năng xử lý hình
+                    ảnh, đồ họa cho bộ vi xử lý.</p>
+
+                <h3>RAM Corsair Vengeance RGB White 32GB (2x16GB) 5600 DDR5</h3>
+                <p> Để PC GVN Intel i7-14700F/ VGA RTX 4070Ti Super lưu trữ tốt hơn dễ dàng truy xuất và xử lý dữ liệu,
+                    GEARVN đã trang bị dòng RAM với sức mạnh vượt trội đến từ Corsair. <br>
+                    Corsair Vengeance RGB White 32GB (2x16GB) với bus ram lên đến 5600 mang lại hiệu suất cao nhất của
+                    DDR5. Cải thiện khả năng ép xung cho bộ máy PC chơi game sử dụng công nghệ On-die ECC (ODECC) giúp
+                    duy trì dữ liệu một cách trọn vẹn, đảm bảo sự ổn định cho cả hệ thống.</p>
+                <img src="../../assets/img/sanpham/pcb1.8.png" alt="">
+                <p>Để có những trải nghiệm game tuyệt đỉnh hay các ứng dụng nâng cao với hiệu năng vượt trội trong mọi
+                    hoàn cảnh, RAM DDR5 Corsair có thời gian truyền tải dữ liệu hàng loạt tăng gấp đôi 8 đến 16 và 2
+                    kênh phụ 32-bit.</p>
+
+                <h3>Card đồ hoạ ASUS TUF Gaming GeForce RTX 4070 Ti SUPER 16GB GDDR6X White OC Edition</h3>
+                <p> Bộ máy tính để bàn PC GVN Intel i7-14700F/ VGA RTX 4070Ti Super được trang bị card màn hình ASUS TUF
+                    Gaming GeForce RTX 4070 Ti SUPER 16GB GDDR6X White OC Edition là một trong những sản phẩm cao cấp
+                    nhất của GIGABYTE phục vụ cho nhu cầu gaming xuất ra ở màn hình máy tính ở độ phân giải 2K, 4K.</p>
+                <img src="../../assets/img/sanpham/pcb1.9.webp" alt="">
+                <p>Sử dụng kiến trúc Ada hoàn toàn mới cùng nhân RT thế hệ 4, nhân Tensor thế hệ 3, Nvidia RTX IO, VRAM
+                    GDDR6X và sản xuất trên tiến trình 4nm. Dễ dàng tinh chỉnh thông qua phần mềm MSI độc quyền giúp bạn
+                    khai thác tối đa hiệu năng nhằm nâng cao hiệu suất hoạt động cho cả bộ máy trong suốt quá trình chơi
+                    game giải trí.</p>
+
+                <h3>SSD WD Black SN770 1TB M.2 NVMe PCIe Gen4</h3>
+                <p> Được xem là một trong những sự lựa chọn tốt nhất hiện nay dành cho game thủ cả về giá thành lẫn hiệu
+                    năng, SSD WD Black SN770 1TB M.2 NVMe PCIe Gen4 đáp ứng mọi nhu cầu về tốc độ của bạn với chuẩn giao
+                    tiếp PCIe 4.0, sử dụng công nghệ HMB và giao diện NVMe để đạt hiệu quả cao. </p>
+                <img src="../../assets/img/sanpham/pcb1.10.webp" alt="">
+                <p>
+                <ul>
+                    <li>- Tốc độ đọc/ghi tuần tự lên đến 5.150/ 4.900 MB/s, gấp nhiều lần tốc độ của SSD SATA.</li>
+                    <li>- Độ bền vượt trội nhờ vào công nghệ V-NAND 128-Layers.</li>
+                    <li>- Được hỗ trợ tản nhiệt, giúp ổ cứng hoạt mát mẻ và ổn định trong suốt quá trình sử dụng.</li>
+                    <li>- Dễ dàng theo dõi, quản lý và duy trì hiệu năng SSD qua phần mềm.</li>
+                </ul>
+                </p>
+
+                <h3>Nguồn Corsair RM850e ATX 3.0 - 80 Plus Gold - Full Modular (850W)</h3>
+                <p> Nguồn PC hỗ trợ dành cho những cổ máy gaming đẳng cấp và đắt tiền có thể hỗ trợ GPU NVIDIA GeForce
+                    RTX 40/30 series và AMD. Được chuẩn bị cho các yêu cầu cao nhất, hỗ trợ IO của bộ Nguồn Corsair
+                    RM850e ATX 3.0 có thể hỗ trợ các cách kết nối khác nhau và linh hoạt theo thiết kế của các card đồ
+                    họa khác nhau khi build PC.</p>
+                <img src="../../assets/img/sanpham/pcb1.11.webp" alt="">
+                <p>Với công suất hoạt động tối đa lên đến 850W mang đến hiệu quả trực tiếp đến hệ thống và mức tiêu thụ
+                    điện năng của bộ PC. Chứng nhận 80 Plus Gold hứa hẹn tiêu thụ năng lượng thấp hơn và hiệu quả cao
+                    hơn.</p>
+
+                <h3>Case Corsair 6500X TG Mid-Tower White</h3>
+                <p> Case máy tính với kích thước Mid-Tower trung bình thoải mái cho người dùng lắp ráp các linh kiện máy
+                    tính phù hợp. Case Corsair 6500X TG Mid-Tower White được thiết kế theo dạng hoa văn độc đáo vừa mang
+                    lại tính thẩm mỹ cao vừa tạo các lỗ thông gió hiệu quả và dễ dàng tháo lắp. Điều này giúp cho bộ máy
+                    PC GVN Intel i7-14700F/ VGA RTX 4070Ti Super thêm phần ấn tượng, tạo nên vẻ ngoài độc đáo.</p>
+                <img src="../../assets/img/sanpham/pcb1.12.webp" alt="">
+
+                <h3>Tản nhiệt nước Corsair H150i ELITE CAPELLIX XT WHITE</h3>
+                <p> Tản nhiệt nước Corsair H150i ELITE CAPELLIX XT WHITE với thiết kế mới giúp toàn bộ linh kiện PC tăng
+                    cường độ bền duy trì hiệu suất hoạt động tốt. Đây được xem là mảnh ghép cuối cùng dành cho bộ máy
+                    chơi game hoàn hảo. </p>
+                <img src="../../assets/img/sanpham/pcb1.13.webp" alt="">
+                <p>Dòng linh kiện máy tính thế hệ mới sở hữu thiết kế pump mới với các linh kiện nổi bật và chất lượng
+                    để tăng cường độ bền duy trì hiệu suất hoạt động. Nếu bạn lo lắng về tình trạng rỉ nước ở các dòng
+                    sản phẩm tản nhiệt nước sẽ ảnh hưởng đến tuổi thọ của hệ thống, với Tản nhiệt nước Corsair H150i
+                    ELITE CAPELLIX XT WHITE bạn có thể hoàn toàn yên tâm vì đã được đã sử dụng chất liệu cao su EPDM
+                    theo tiêu chuẩn ngăn ngừa rỉ nước.</p>
+                <!-- thêm video vào website -->
+                <section class="video">
+                    <iframe width="600" height="315" src="https://www.youtube.com/embed/6sMrCBZBNjg?si=qLlYqy-oBr2KzDEK"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </article>
+        <!-- aside bar -->
+        <aside>
+            <div class="aside_widget">
+                <section class="detail_sp">
+                    <div class="detail_nd">
+                        <h3>PC Intel i7-14700F / VGA RTX 4070Ti Super</h3>
+                        <p class="code_sp">Mã sản phẩm: In486222999 </p>
+                        <p class="price_product"> 65.490.000₫ <span class="price_del"> 68.700.000₫</span></p>
+                        <p class="detail_ndct">ASUS ROG Strix Z790-A GAMING WIFI II DDR5 là bo mạch chủ sử dụng chipset
+                            Z790 của Intel thuộc phân khúc cao cấp của ASUS. Trái tim của bộ PC GVN Intel i7-14700F/ VGA
+                            RTX 4070Ti Super sử dụng socket LGA 1700 có thể chạy được CPU Intel Core thế hệ 13, 14 hỗ
+                            trợ PCI-E Gen 5.0 mới nhất.</p>
+                        <span class="detail_soLuong">Số lượng: <input type="number" min="1" placeholder="1" tail></span>
+                        <br>
+                        <button class="btn_product add_cart">THÊM GIỎ HÀNG</button>
+                        <button class="btn_product  buy_now">Mua Ngay</button>
+                    </div><!-- nội dung-->
+                </section>
+            </div>
+            <!--menu-->
+
+            <div class="banner_qc">
+                <a href="#"> <img src="../../assets/img/sanpham/qc.png" alt=""></a>
+            </div><!-- banner quảng cáo-->
+
+
+            <div class="aside_widget">
+                <h3 class="product-title">SẢN PHẨM BÁN CHẠY</h3>
+                <ul class="ban_chay">
+                    <!-- sản phẩm 2 -->
+                    <li>
+                        <a href="../Lap/Lenovo LOQ 15IAX9.html" class="anh">
+                            <img src="../../assets/img/SP/SP2.png" alt="">
+                        </a>
+                        <div class="thong_tin">
+                            <p class="title_product">Laptop Lenovo LOQ 15IAX9 83GS001RVN</p>
+                            <p class="price_product"> 20.391.500đ <span class="price_del"> 23.990.000đ </span></p>
+                            <a href="../Lap/Lenovo LOQ 15IAX9.html" class="detail">Chi tiết ></a>
+                        </div>
+                    </li>
+                    <!-- sản phẩm 3-->
+                    <li>
+                        <a href="../Lap/Acer Nitro 5.html" class="anh">
+                            <img src="../../assets/img/SP/SP3.png" alt="">
+                        </a>
+                        <div class="thong_tin">
+                            <p class="title_product">Laptop Gaming Acer Nitro 5 Tiger AN515 58 52SP</p>
+                            <p class="price_product"> 17.490.000đ <span class="price_del"> 27.990.000đ </span></p>
+                            <a href="../Lap/Acer Nitro 5.html" class="detail">Chi tiết ></a>
+                        </div>
+                    </li>
+                    <!-- sản phẩm 4 -->
+                    <li>
+                        <a href="../Lap/Vivobook 15.html" class="anh">
+                            <img src="../../assets/img/SP/SP4.png" alt="">
+                        </a>
+                        <div class="thong_tin">
+                            <p class="title_product">Laptop ASUS Vivobook 15 X1504ZA-NJ517W</p>
+                            <p class="price_product">13.690.000đ<span class="price_del">16.490.000đ</span></p>
+                            <a href="../Lap/ASUS Vivobook 15.html" class="detail">Chi tiết ></a>
+                        </div>
+                    </li>
+                    <!-- sản phẩm 5 -->
+                    <li>
+                        <a href="../Lap/Macbook M1.html" class="anh">
+                            <img src="../../assets/img/SP/SP5.png" alt="">
+                        </a>
+                        <div class="thong_tin">
+                            <p class="title_product">Apple MacBook Air M1 256GB 2020 I Chính hãng Apple Việt Nam</p>
+                            <p class="price_product">18.190.000đ<span class="price_del">22.990.000đ</span></p>
+                            <a href="../Lap/Macbook M1.html" class="detail">Chi tiết ></a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <!--Sản phẩm bán chạy-->
+        </aside>
+    </div>
+
+
+    <div id="scrollToTop">
+        <a id="btnbg" href="#top"> <i class='bx bxs-arrow-to-top'></i> </a>
+        <a type="submit" formaction="#" href="#top"> <i class='bx bxs-arrow-to-top'></i> </a>
+    </div>
+    <br>
+    <br>
+
+
+    <footer id="footer">
+        <div class="footer-container">
+            <div class="footer-contact">
+                <button type="button" class="btn btn-primary focus:outline-none border-0" data-bs-toggle="collapse"
+                    data-bs-target="#contact-collapse">
+                    Tổng đài hỗ trợ <i class='bx bxs-chevron-down'></i>
+                </button>
+                <div id="contact-collapse" class="collapse">
+                    <p>Gọi Mua Hàng: <a href="#">1800.2097</a> </p>
+                    <p>Khiếu nại: <a href="#">1800.1062</a></p>
+                    <p>Bảo hành: <a href="#">1900 232 464</a></p>
+                </div>
+
+                <h4>Phương thức thanh toán.</h4>
+                <div class="footer-img">
+                    <a href="https://zalopay.vn/"><img src="../../assets/img/footer/zalopay-logo.webp"
+                            alt="zalopay"></a>
+                    <a href="https://www.momo.vn/"><img src="../../assets/img/footer/momo_1.webp" alt="MOMO"></a>
+                    <a href="https://www.visa.com.vn/en_VN"><img
+                            src="../../assets/img/footer/d4bbea4570b93bfd5fc652ca82a262a8.png" alt="visa"></a>
+                    <a href="https://onepay.vn/invoice/login.op"><img src="../../assets/img/footer/onepay-logo.webp"
+                            alt="onePay"></a>
+                    <a href="https://vnpay.vn/"><img src="../../assets/img/footer/vnpay-logo.webp" alt="VNpay"></a>
+                    <a href="https://www.apple.com/vn/apple-pay/"><img src="../../assets/img/footer/apple-pay-og.webp"
+                            alt="applepay"></a>
+                </div>
+            </div>
+
+            <div class="footer-text">
+                <button type="button" class="btn btn-primary" data-bs-toggle="collapse" data-bs-target="#text-collapse">
+                    Thông tin và chính sách <i class='bx bxs-chevron-down'></i>
+                </button>
+                <div id="text-collapse" class="collapse">
+                    <p>Mua hàng và thanh toán Online</p>
+                    <p>Mua hàng trả góp Online</p>
+                    <p>Mua hàng trả góp bằng thẻ tín dụng</p>
+                    <p>Giao hàng & Thanh toán</p>
+                    <p>Tin tức khuyến mại</p>
+                    <p>Tra thông tin bảo hành</p>
+                    <p>Tra cứu hoá đơn điện tử</p>
+                    <p>Thông tin hoá đơn mua hàng</p>
+                    <p>Trung tâm bảo hành chính hãng</p>
+                </div>
+            </div>
+
+            <div class="footer-different">
+                <button type="button" class="btn btn-primary" data-bs-toggle="collapse"
+                    data-bs-target="#different-collapse">
+                    Dịch vụ và thông tin khác <i class='bx bxs-chevron-down'></i>
+                </button>
+                <div id="different-collapse" class="collapse">
+                    <p>Khách hàng doanh nghiệp (B2B)</p>
+                    <p>Ưu đãi thanh toán</p>
+                    <p>Quy chế hoạt động</p>
+                    <p>Chính sách bảo mật thông tin cá nhân</p>
+                    <p>Chính sách Bảo hành</p>
+                    <p>Liên hệ hợp tác kinh doanh</p>
+                    <p>Tuyển dụng</p>
+                    <p>Dịch vụ bảo hành mở rộng</p>
+                </div>
+            </div>
+
+            <div class="footer-social">
+                <h4>Kết nối với siêu phẩm việt.</h4>
+                <div class="footer-icon">
+                    <a href="https://www.facebook.com/"><i class="bx bxl-facebook-circle"></i></a>
+                    <a href="https://www.tiktok.com/fr/"><i class="bx bxl-tiktok"></i></a>
+                    <a href="https://www.linkedin.com/"><i class="bx bxl-linkedin"></i></a>
+                    <a href="https://www.instagram.com/"><i class="bx bxl-instagram"></i></a>
+                    <a
+                        href="https://accounts.google.com/v3/signin/identifier?continue=https%3A%2F%2Fadmin.google.com%2Fhcmute.edu.vn%2FDashboard&service=CPanel&hl=vi&ddm=1&flowName=GlifWebSignIn&flowEntry=AccountChooser"><i
+                            class="bx bxl-gmail"></i></a>
+                    <a
+                        href="https://www.messenger.com/login.php?next=https%3A%2F%2Fwww.messenger.com%2Ft%2F8714169748610710%3Flocale%3Dvi_VN"><i
+                            class="bx bxl-messenger"></i></a>
+                </div>
+                <br>
+                <h4>Chứng nhận.</h4>
+                <div class="footer-img">
+                    <a href="#"><img src="../../assets/img/footer/dmca_icon_8fc6622bd5.svg" alt=""></a>
+                    <a href="#"><img
+                            src="../../assets/img/footer/san_pham_dich_vu_hang_dau_viet_nam_icon_282a9ba4f7.svg"
+                            alt=""></a>
+                    <a href="#"><img src="../../assets/img/footer/thuong_hieu_manh_2013_icon_b56f772475.svg" alt=""></a>
+                    <a href="#"><img src="../../assets/img/footer/noi_khong_voi_hang_gia_icon_e16037d9cb.svg"
+                            alt=""></a>
+                    <a href="#"><img src="../../assets/img/footer/da_thong_bao_bo_cong_thuong_icon_64785fb3f7.svg"
+                            alt=""></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div class="footer-text">
+                <h5>Chính sách bảo mật</h5>
+                <h5>Chính sách vận chuyển</h5>
+                <h5>Quy chế hoạt động</h5>
+                <h5>Chính sách trả hàng và hoàn tiền</h5>
+            </div>
+            <div>
+                <p>© 2024. Công ty Cổ Phần Bán Lẻ Kỹ Thuật Số Siêu Phẩm Việt. GPDKKD: 0303217354 do sở KH & ĐT TP.HCM
+                    cấp ngày
+                    15/12/2024. GPMXH:
+                    238/GP-BTTTT do Bộ Thông Tin và Truyền Thông cấp ngày 15/12/2024.</p>
+                Địa chỉ: 280, An Dương Vương, P. 4, Q. 5, Tp. Hồ Chí Minh.
+                <p>Địa chỉ liên hệ và gửi chứng từ: 280, An Dương Vương, P. 4, Q. 5, Tp. Hồ Chí Minh.</p>
+                <p> Email:
+                    cskh@sieuphamviet.com. Email: hotrotmdt@sieuphamviet.com.</p> Chịu trách nhiệm nội dung: Dương
+                Trung Nguyên, Nguyễn Phạm Phú An, Nguyễn Văn Tuấn, Trần Nguyễn Xuân Sơn, Nguyễn Đức Trọng.
+                <a href="#" style="text-decoration: none;">Xem chính sách sử dụng</a>
+            </div>
+        </div>
+    </footer>
+    <script src="../../assets/js/bootstrap.bundle.min.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="../../assets/js/js.js"></script>
+
+</body>
+
+</html>

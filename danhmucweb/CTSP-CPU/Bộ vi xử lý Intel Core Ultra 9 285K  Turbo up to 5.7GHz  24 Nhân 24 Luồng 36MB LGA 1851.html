@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chi Tiết Sản Phẩm</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    <link rel="stylesheet" href="../../assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../assets/css/boxicons.min.css">
+    <link rel="stylesheet" href="../../assets/plugin/font-awesome/all.css">
+    <link rel="stylesheet" href="../../assets/css/catagory.css">
+    <link rel="stylesheet" href="../../assets/css/layout.css">
+    <link rel="stylesheet" href="../../assets/css/1.css">
+    <link rel="icon" href="../../assets/img/header/logo.png" type="image/x-icon">
+</head>
+<style>
+    .detail_img {
+        width: 600px;
+        margin-right: 15px;
+        aspect-ratio: auto;
+    }
+
+    .detail_img img {
+        aspect-ratio: 4/3;
+        background-size: cover;
+    }
+
+    .detail_nd {
+        width: fit-content;
+        min-width: 350px;
+    }
+
+    .detail_nd h3 {
+        font-size: 28px;
+    }
+
+    .code_sp,
+    .detail_ndct {
+        padding: 10px 10px;
+        color: #000000;
+    }
+
+    .detail_ndct {
+        padding-top: 35px;
+        padding-bottom: 50px;
+    }
+
+    .detail_soLuong input {
+        padding: 5px 10px;
+        width: 60px;
+        box-sizing: border-box;
+        border: 1px solid gray;
+        margin-bottom: 10px;
+        border-radius: 15px;
+    }
+
+    .add_cart {
+        background-color: #029900;
+        color: white;
+    }
+
+    .buy_now {
+        background-color: #e60f1e;
+        color: white;
+    }
+
+    .info_sanPham {
+        margin-top: 25px;
+        margin-bottom: 15px;
+        border-bottom: 1px solid rgb(21, 158, 192);
+        padding: 10px 0px;
+    }
+
+    .info_sanPham p {
+        padding: 10px 20px;
+        display: inline;
+        color: white;
+        background-color: rgb(61, 61, 61);
+    }
+</style>
+
+<body id="top">
+    <header class=" d-md-flex menu" id="header">
+        <div class="logo">
+            <a href="../../SieuPhamViet.html">
+                <h3 class=" d-lg-block">Siêu Phẩm Việt</h3>
+                <img src="../../assets/img/header/logo.png" alt="logo">
+            </a>
+        </div>
+        <div class="nav">
+            <i class='bx bx-menu icon' style="color: white"></i>
+            <span>Danh Mục</span>
+            <div class="menu-container">
+                <div class="menu-child">
+                    <a href="../../danhmucweb/pclapsan/Pcbuilt.html">
+                        <img src="../../assets/img/linkKienPC/pc-do-hoa.png" alt="PC" width="80px">
+                        <h4>PC ráp sẵn</h4>
+                    </a>
+                </div>
+                <div class="menu-child">
+                    <a href="../../danhmucweb/mainboard/mainboard.html">
+                        <img src="../../assets/img/linkKienPC/mainboard.png" alt="Mainboard" width="80px">
+                        <h4>Mainboard</h4>
+                    </a>
+                </div>
+                <div class="menu-child">
+                    <a href="../../danhmucweb/tannhiet/tan__nhiet.html">
+                        <a href="../../danhmucweb/vga/Vga.html">
+                            <img src="../../assets/img/linkKienPC/vga.png" alt="VGA" width="80px">
+                            <h4>VGA</h4>
+                        </a>
+                </div>
+                <div class="menu-child">
+                    <a href="../../danhmucweb/cpu/cpu.html">
+                        <img src="../../assets/img/linkKienPC/cpu.png" alt="CPU" width="80px">
+                        <h4>CPU</h4>
+                    </a>
+                </div>
+                <div class="menu-child">
+                    <a href="../../danhmucweb/Ram/Ram.html">
+                        <img src="../../assets/img/linkKienPC/ram.png" alt="RAM" width="80px">
+                        <h4>RAM</h4>
+                    </a>
+                </div>
+                <div class="menu-child">
+                    <a href="../../danhmucweb/o_cung/o_cung.html">
+                        <img src="../../assets/img/linkKienPC/o_cung.png" alt="Ổ Cứng" width="80px">
+                        <h4>Ổ Cứng</h4>
+                    </a>
+                </div>
+                <div class="menu-child">
+                    <a href="../../danhmucweb/tannhiet/tan__nhiet.html">
+                        <img src="../../assets/img/linkKienPC/tan_nhiet.png" alt="Tản Nhiệt" width="80px">
+                        <h4>Tản Nhiệt</h4>
+                    </a>
+                </div>
+                <div class="menu-child">
+                    <a href="../../danhmucweb/vo_case/vo_case.html">
+                        <img src="../../assets/img/linkKienPC/vo_case.png" alt="Vỏ Case" width="80px">
+                        <h4>Vỏ Case</h4>
+                    </a>
+                </div>
+                <div class="menu-child">
+                    <a href="../../danhmucweb/buildPC/buildPC.html">
+                        <img src="../../assets/img/linkKienPC/LZ8A8126_Final.webp" alt="Vỏ Case" width="80px">
+                        <h4>Tự Build PC</h4>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="menu-search">
+            <input class="menu-input-search" type="text" placeholder="Tìm kiếm sản phầm bạn ưa thích"
+                spellcheck="false">
+            <span onclick="toggleSearchMenu()"> <i class='bx bx-search'></i> </span>
+            <button class="close" type="button" onclick="closeSearchMenu()"><i class='bx bx-x'
+                    style="font-size: 40px;"></i></button>
+        </div>
+        <div>
+            <ul class="list-menu">
+                <li><a href="../../danhmucweb/datHang/order__main.html"><i class='bx bx-cart '></i><span>(9)</span></a>
+                </li>
+                <li><a href="../../danhmucweb/listweb/dangnhap.html"><i class='bx bx-user-circle'></i>
+                        <span>Đăng Nhập</span></a>
+                </li>
+            </ul>
+        </div>
+    </header>
+    <section class="danh_muc mg_top">
+        <div class="container">
+            <ul>
+                <li><a href="../../SieuPhamViet.html"><ion-icon name="home-outline" role="img" class="md hydrated"></a>
+                </li>
+                <li><a href="../../SieuPhamViet.html"> Trang Chủ</a></li>
+                <li><a href="">></a></li>
+                <li><a
+                        href="Bộ vi xử lý Intel Core Ultra 9 285K  Turbo up to 5.7GHz  24 Nhân 24 Luồng 36MB LGA 1851.html">
+                        Chi Tiết Sản Phẩm</a></li>
+            </ul>
+        </div>
+    </section>
+    <div class="container main">
+        <article>
+            <!-- làm thông tin giỏ hàng -->
+            <section class="detail_sp">
+                <div class="detail_img">
+                    <div style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff"
+                        class="swiper mySwiper2">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <img src="../../assets/img/sanpham/Intel__Core__Ultra 9__285K.webp" alt="">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="../../assets/img/sanpham/cpu1.1.webp" alt="">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="../../assets/img/sanpham/cpu1.2.webp" alt="">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="../../assets/img/sanpham/cpu1.3.webp" alt="">
+                            </div>
+                        </div>
+                        <div class="swiper-button-next"></div>
+                        <div class="swiper-button-prev"></div>
+                    </div>
+                    <br>
+                    <div thumbsSlider="" class="swiper mySwiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <img src="../../assets/img/sanpham/Intel__Core__Ultra 9__285K.webp" alt="">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="../../assets/img/sanpham/cpu1.1.webp" alt="">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="../../assets/img/sanpham/cpu1.2.webp" alt="">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="../../assets/img/sanpham/cpu1.3.webp" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <br>
+            <br>
+            <!--thông tin sản phẩm, chi tiết về sản phẩm -->
+            <section class="info_sanPham">
+                <p class="ttsp">Thông tin sản phẩm</p>
+            </section>
+
+
+            <div class="bai_viet">
+                <h1>Giới thiệu CPU Intel Core Ultra 9 285K</h1>
+                <h3>Kiến trúc Arrow Lake-S và công nghệ tiên tiến</h3>
+                <p>
+                    Intel Core Ultra 9 285K được xây dựng trên nền tảng kiến trúc Arrow Lake-S, thuộc thế hệ thứ 15 của
+                    Intel. Arrow Lake-S là bước tiến đáng chú ý trong sự phát triển của các CPU desktop, với sự tối ưu
+                    hóa trên tiến trình TSMC N3B (3nm) tiên tiến, mang lại hiệu suất cao hơn và tiêu thụ điện năng thấp
+                    hơn so với thế hệ trước. Điều này giúp Ultra 9 285K có khả năng xử lý mượt mà những tác vụ phức tạp,
+                    đồng thời duy trì nhiệt độ và mức tiêu thụ điện ổn định. <br>
+                    Một điểm đáng chú ý khác của kiến trúc Arrow Lake-S là cải thiện băng thông bộ nhớ và hỗ trợ bộ nhớ
+                    DDR5, PCIe 5.0, cho phép CPU này tận dụng tối đa những công nghệ phần cứng mới nhất hiện nay. Điều
+                    này giúp cải thiện tốc độ truyền tải dữ liệu và tăng khả năng tương thích với các card đồ họa và ổ
+                    SSD thế hệ mới.
+                </p>
+                <img src="../../assets/img/sanpham/cpu1.2.webp" alt="">
+                <h3>Cấu hình mạnh mẽ: 24 nhân, 24 luồng và xung nhịp tối đa 5.7 GHz</h3>
+                <P> Một trong những điểm nổi bật của Intel Core Ultra 9 285K chính là số lượng nhân và luồng ấn tượng.
+                    Với 24 nhân và 24 luồng, CPU này có khả năng xử lý đa nhiệm xuất sắc, đáp ứng mọi nhu cầu từ gaming,
+                    đồ họa, render video cho đến các ứng dụng khoa học, kỹ thuật yêu cầu cao về tài nguyên CPU. <br>
+                    Xung nhịp tối đa lên đến 5.7 GHz là một con số ấn tượng, đặc biệt hữu ích cho các tác vụ đơn luồng
+                    cần tốc độ xử lý cao, chẳng hạn như chơi game hoặc làm việc với các phần mềm thiết kế 3D. Điều này
+                    cũng đồng nghĩa với việc, dù là một tác vụ nặng như render video 4K hay chỉnh sửa ảnh độ phân giải
+                    cao, CPU vẫn có thể xử lý một cách nhanh chóng và hiệu quả.
+                </P>
+                <img src="../../assets/img/sanpham/cpu1.4.webp" alt="">
+                <h3>Hiệu suất thực tế: Gaming và làm việc</h3>
+                <p>Trong các thử nghiệm thực tế, Intel Core Ultra 9 285K cho thấy hiệu suất đáng kinh ngạc trong hầu hết
+                    các tác vụ, đặc biệt là chơi game. Với xung nhịp cao và khả năng tối ưu tốt trong các game AAA, CPU
+                    này giúp đạt được mức FPS ổn định ở các tựa game như Cyberpunk 2077, Call of Duty: Warzone hay Red
+                    Dead Redemption 2 khi thiết lập đồ họa ở mức cao nhất. <br>
+                    Không chỉ mạnh mẽ trong gaming, Ultra 9 285K còn tỏa sáng trong các tác vụ đa nhiệm và làm việc
+                    chuyên nghiệp. Việc xử lý đồ họa với các phần mềm như Adobe Premiere, After Effects hay Blender trở
+                    nên trơn tru và mượt mà hơn nhiều. Với khả năng render nhanh chóng và xử lý nhiều layer đồ họa phức
+                    tạp, CPU này là một lựa chọn lý tưởng cho các nhà thiết kế đồ họa, biên tập video hay những người
+                    làm việc trong lĩnh vực công nghệ.
+                </p>
+                <img src="../../assets/img/sanpham/cpu1.5.webp" alt="">
+                <!-- thêm video vào website -->
+                <section class="video">
+                    <iframe width="600" height="315" src="https://www.youtube.com/embed/zhHU5eSH3mg?si=GPBIaArQ7a3ML86G"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </article>
+        <!-- aside bar -->
+        <aside>
+            <div class="aside_widget">
+                <section class="detail_sp">
+                    <div class="detail_nd">
+                        <h3>Bộ vi xử lý Intel Core Ultra 9 285K / Turbo up to 5.7GHz / 24 Nhân 24 Luồng / 36MB / LGA
+                            1851</h3>
+                        <p class="code_sp">Mã sản phẩm: In5299815-666 </p>
+                        <p class="price_product"> 16.999.000₫ <span class="price_del"> 17.490.000₫ </span></p>
+                        <p class="detail_ndct">Intel luôn nổi tiếng với những dòng CPU mạnh mẽ, và Intel Core Ultra 9
+                            285K là một trong những đại diện nổi bật trong thế hệ Arrow Lake-S. Với thiết kế 24 nhân 24
+                            luồng cùng khả năng đạt xung nhịp lên đến 5.7 GHz, đây là một lựa chọn đáng giá cho cả game
+                            thủ và người dùng cần hiệu suất cao trong các tác vụ đồ họa, xử lý dữ liệu. Trong bài viết
+                            này, chúng ta sẽ đi sâu vào đánh giá nhanh về CPU Intel Core Ultra 9 285K, từ kiến trúc,
+                            hiệu suất cho đến khả năng ép xung và tính năng nổi bật của nó.</p>
+                        <span class="detail_soLuong">Số lượng: <input type="number" min="1" placeholder="1" tail></span>
+                        <br>
+                        <button class="btn_product add_cart">THÊM GIỎ HÀNG</button>
+                        <button class="btn_product  buy_now">Mua Ngay</button>
+                    </div><!-- nội dung-->
+                </section>
+            </div>
+            <!--menu-->
+
+            <div class="banner_qc">
+                <a href="#"> <img src="../../assets/img/sanpham/qc.png" alt=""></a>
+            </div><!-- banner quảng cáo-->
+
+
+            <div class="aside_widget">
+                <h3 class="product-title">SẢN PHẨM BÁN CHẠY</h3>
+                <ul class="ban_chay">
+                    <!-- sản phẩm 2 -->
+                    <li>
+                        <a href="../Lap/Lenovo LOQ 15IAX9.html" class="anh">
+                            <img src="../../assets/img/SP/SP2.png" alt="">
+                        </a>
+                        <div class="thong_tin">
+                            <p class="title_product">Laptop Lenovo LOQ 15IAX9 83GS001RVN</p>
+                            <p class="price_product"> 20.391.500đ <span class="price_del"> 23.990.000đ </span></p>
+                            <a href="../Lap/Lenovo LOQ 15IAX9.html" class="detail">Chi tiết ></a>
+                        </div>
+                    </li>
+                    <!-- sản phẩm 3-->
+                    <li>
+                        <a href="../Lap/Acer Nitro 5.html" class="anh">
+                            <img src="../../assets/img/SP/SP3.png" alt="">
+                        </a>
+                        <div class="thong_tin">
+                            <p class="title_product">Laptop Gaming Acer Nitro 5 Tiger AN515 58 52SP</p>
+                            <p class="price_product"> 17.490.000đ <span class="price_del"> 27.990.000đ </span></p>
+                            <a href="../Lap/Acer Nitro 5.html" class="detail">Chi tiết ></a>
+                        </div>
+                    </li>
+                    <!-- sản phẩm 4 -->
+                    <li>
+                        <a href="../Lap/Vivobook 15.html" class="anh">
+                            <img src="../../assets/img/SP/SP4.png" alt="">
+                        </a>
+                        <div class="thong_tin">
+                            <p class="title_product">Laptop ASUS Vivobook 15 X1504ZA-NJ517W</p>
+                            <p class="price_product">13.690.000đ<span class="price_del">16.490.000đ</span></p>
+                            <a href="../Lap/ASUS Vivobook 15.html" class="detail">Chi tiết ></a>
+                        </div>
+                    </li>
+                    <!-- sản phẩm 5 -->
+                    <li>
+                        <a href="../Lap/Macbook M1.html" class="anh">
+                            <img src="../../assets/img/SP/SP5.png" alt="">
+                        </a>
+                        <div class="thong_tin">
+                            <p class="title_product">Apple MacBook Air M1 256GB 2020 I Chính hãng Apple Việt Nam</p>
+                            <p class="price_product">18.190.000đ<span class="price_del">22.990.000đ</span></p>
+                            <a href="../Lap/Macbook M1.html" class="detail">Chi tiết ></a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <!--Sản phẩm bán chạy-->
+        </aside>
+    </div>
+
+
+    <div id="scrollToTop">
+        <a id="btnbg" href="#top"> <i class='bx bxs-arrow-to-top'></i> </a>
+        <a type="submit" formaction="#" href="#top"> <i class='bx bxs-arrow-to-top'></i> </a>
+    </div>
+    <br>
+    <br>
+
+
+    <footer id="footer">
+        <div class="footer-container">
+            <div class="footer-contact">
+                <button type="button" class="btn btn-primary focus:outline-none border-0" data-bs-toggle="collapse"
+                    data-bs-target="#contact-collapse">
+                    Tổng đài hỗ trợ <i class='bx bxs-chevron-down'></i>
+                </button>
+                <div id="contact-collapse" class="collapse">
+                    <p>Gọi Mua Hàng: <a href="#">1800.2097</a> </p>
+                    <p>Khiếu nại: <a href="#">1800.1062</a></p>
+                    <p>Bảo hành: <a href="#">1900 232 464</a></p>
+                </div>
+
+                <h4>Phương thức thanh toán.</h4>
+                <div class="footer-img">
+                    <a href="https://zalopay.vn/"><img src="../../assets/img/footer/zalopay-logo.webp"
+                            alt="zalopay"></a>
+                    <a href="https://www.momo.vn/"><img src="../../assets/img/footer/momo_1.webp" alt="MOMO"></a>
+                    <a href="https://www.visa.com.vn/en_VN"><img
+                            src="../../assets/img/footer/d4bbea4570b93bfd5fc652ca82a262a8.png" alt="visa"></a>
+                    <a href="https://onepay.vn/invoice/login.op"><img src="../../assets/img/footer/onepay-logo.webp"
+                            alt="onePay"></a>
+                    <a href="https://vnpay.vn/"><img src="../../assets/img/footer/vnpay-logo.webp" alt="VNpay"></a>
+                    <a href="https://www.apple.com/vn/apple-pay/"><img src="../../assets/img/footer/apple-pay-og.webp"
+                            alt="applepay"></a>
+                </div>
+            </div>
+
+            <div class="footer-text">
+                <button type="button" class="btn btn-primary" data-bs-toggle="collapse" data-bs-target="#text-collapse">
+                    Thông tin và chính sách <i class='bx bxs-chevron-down'></i>
+                </button>
+                <div id="text-collapse" class="collapse">
+                    <p>Mua hàng và thanh toán Online</p>
+                    <p>Mua hàng trả góp Online</p>
+                    <p>Mua hàng trả góp bằng thẻ tín dụng</p>
+                    <p>Giao hàng & Thanh toán</p>
+                    <p>Tin tức khuyến mại</p>
+                    <p>Tra thông tin bảo hành</p>
+                    <p>Tra cứu hoá đơn điện tử</p>
+                    <p>Thông tin hoá đơn mua hàng</p>
+                    <p>Trung tâm bảo hành chính hãng</p>
+                </div>
+            </div>
+
+            <div class="footer-different">
+                <button type="button" class="btn btn-primary" data-bs-toggle="collapse"
+                    data-bs-target="#different-collapse">
+                    Dịch vụ và thông tin khác <i class='bx bxs-chevron-down'></i>
+                </button>
+                <div id="different-collapse" class="collapse">
+                    <p>Khách hàng doanh nghiệp (B2B)</p>
+                    <p>Ưu đãi thanh toán</p>
+                    <p>Quy chế hoạt động</p>
+                    <p>Chính sách bảo mật thông tin cá nhân</p>
+                    <p>Chính sách Bảo hành</p>
+                    <p>Liên hệ hợp tác kinh doanh</p>
+                    <p>Tuyển dụng</p>
+                    <p>Dịch vụ bảo hành mở rộng</p>
+                </div>
+            </div>
+
+            <div class="footer-social">
+                <h4>Kết nối với siêu phẩm việt.</h4>
+                <div class="footer-icon">
+                    <a href="https://www.facebook.com/"><i class="bx bxl-facebook-circle"></i></a>
+                    <a href="https://www.tiktok.com/fr/"><i class="bx bxl-tiktok"></i></a>
+                    <a href="https://www.linkedin.com/"><i class="bx bxl-linkedin"></i></a>
+                    <a href="https://www.instagram.com/"><i class="bx bxl-instagram"></i></a>
+                    <a
+                        href="https://accounts.google.com/v3/signin/identifier?continue=https%3A%2F%2Fadmin.google.com%2Fhcmute.edu.vn%2FDashboard&service=CPanel&hl=vi&ddm=1&flowName=GlifWebSignIn&flowEntry=AccountChooser"><i
+                            class="bx bxl-gmail"></i></a>
+                    <a
+                        href="https://www.messenger.com/login.php?next=https%3A%2F%2Fwww.messenger.com%2Ft%2F8714169748610710%3Flocale%3Dvi_VN"><i
+                            class="bx bxl-messenger"></i></a>
+                </div>
+                <br>
+                <h4>Chứng nhận.</h4>
+                <div class="footer-img">
+                    <a href="#"><img src="../../assets/img/footer/dmca_icon_8fc6622bd5.svg" alt=""></a>
+                    <a href="#"><img
+                            src="../../assets/img/footer/san_pham_dich_vu_hang_dau_viet_nam_icon_282a9ba4f7.svg"
+                            alt=""></a>
+                    <a href="#"><img src="../../assets/img/footer/thuong_hieu_manh_2013_icon_b56f772475.svg" alt=""></a>
+                    <a href="#"><img src="../../assets/img/footer/noi_khong_voi_hang_gia_icon_e16037d9cb.svg"
+                            alt=""></a>
+                    <a href="#"><img src="../../assets/img/footer/da_thong_bao_bo_cong_thuong_icon_64785fb3f7.svg"
+                            alt=""></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div class="footer-text">
+                <h5>Chính sách bảo mật</h5>
+                <h5>Chính sách vận chuyển</h5>
+                <h5>Quy chế hoạt động</h5>
+                <h5>Chính sách trả hàng và hoàn tiền</h5>
+            </div>
+            <div>
+                <p>© 2024. Công ty Cổ Phần Bán Lẻ Kỹ Thuật Số Siêu Phẩm Việt. GPDKKD: 0303217354 do sở KH & ĐT TP.HCM
+                    cấp ngày
+                    15/12/2024. GPMXH:
+                    238/GP-BTTTT do Bộ Thông Tin và Truyền Thông cấp ngày 15/12/2024.</p>
+                Địa chỉ: 280, An Dương Vương, P. 4, Q. 5, Tp. Hồ Chí Minh.
+                <p>Địa chỉ liên hệ và gửi chứng từ: 280, An Dương Vương, P. 4, Q. 5, Tp. Hồ Chí Minh.</p>
+                <p> Email:
+                    cskh@sieuphamviet.com. Email: hotrotmdt@sieuphamviet.com.</p> Chịu trách nhiệm nội dung: Dương
+                Trung Nguyên, Nguyễn Phạm Phú An, Nguyễn Văn Tuấn, Trần Nguyễn Xuân Sơn, Nguyễn Đức Trọng.
+                <a href="#" style="text-decoration: none;">Xem chính sách sử dụng</a>
+            </div>
+        </div>
+    </footer>
+    <script src="../../assets/js/bootstrap.bundle.min.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="../../assets/js/js.js"></script>
+</body>
+
+</html>
